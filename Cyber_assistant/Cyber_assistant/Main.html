@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Login | Cyber Security Assistant</title>
+
+<style>
+html, body{
+    width:100%;
+    height:100%;
+    margin:0;
+    font-family: Arial, sans-serif;
+}
+
+/* 🔥 FULL SCREEN BACKGROUND */
+body{
+    background-image: url("Images/image.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;       /* FULL FIT */
+    display: flex;
+    justify-content: center;      /* login center horizontally */
+    align-items: center;          /* login center vertically */
+}
+
+/* 🔐 LOGIN BOX */
+.box{
+    background: rgba(0,0,0,0.7);  /* login ke piche image dikhe */
+    padding:35px;
+    width:360px;
+    border-radius:12px;
+    box-shadow:0 0 30px rgba(0,0,0,0.8);
+    color:white;
+}
+
+/* HEADINGS */
+h2, h3{
+    text-align:center;
+    margin:10px 0;
+}
+
+/* INPUTS */
+input{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border:none;
+    border-radius:5px;
+    outline:none;
+}
+
+/* BUTTON */
+button{
+    width:100%;
+    padding:12px;
+    background:#00c853;
+    color:white;
+    border:none;
+    font-size:16px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#00a844;
+}
+
+/* LINKS */
+.forgot{
+    text-align:right;
+    font-size:13px;
+}
+
+a{
+    color:#ffeb3b;
+    text-decoration:none;
+    font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+if(params.get("logout")==="success"){
+    alert("Logout Successfully");
+}
+</script>
+
+<div class="box">
+    <h3>Welcome to</h3>
+    <h2>Cyber Security Assistant</h2>
+
+    <form action="login.php" method="post">
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+
+        <div class="forgot">
+            <a href="forgot_password.html">Forgot Password?</a>
+        </div>
+
+        <button type="submit">Login</button>
+    </form>
+
+    <p style="text-align:center;margin-top:12px;">
+        New user?
+        <a href="register.html">Register</a>
+    </p>
+</div>
+
+</body>
+</html>

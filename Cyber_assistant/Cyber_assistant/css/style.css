@@ -1,0 +1,226 @@
+/* ================= GLOBAL ================= */
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#0f172a;
+    color:#f1f5f9;
+}
+
+/* ================= HEADER ================= */
+.header{
+    position:relative;
+    display:flex;
+    flex-direction:column;      /* Logo upar, title niche */
+    align-items:center;         /* Horizontal center */
+    justify-content:center;
+    padding:25px 0;
+    background:#111827;
+    border-bottom:1px solid #1f2937;
+    text-align:center;
+}
+
+/* ================= LOGO ================= */
+.logo{
+    width:80px;
+    margin-bottom:10px;
+}
+
+/* ================= TITLE ================= */
+.title{
+    font-size:30px;
+    font-weight:bold;
+    color:#00f5ff;
+    letter-spacing:1px;
+    text-align:center;
+}
+
+/* ================= LOGOUT BUTTON ================= */
+.logout{
+    position:absolute;
+    right:30px;
+    top:25px;
+    background:#ef4444;
+    padding:8px 16px;
+    border-radius:6px;
+    text-decoration:none;
+    color:#fff;
+}
+
+
+/* ================= WRAPPER ================= */
+.wrapper{
+    display:flex;
+    justify-content:center;
+    padding:40px 0 100px 0;
+}
+
+/* ================= MAIN CARD ================= */
+.card{
+    width:850px;
+    background:#111827;   /* 🔥 Dark Card */
+    border-radius:18px;
+    padding:30px;
+    box-shadow:0 0 30px rgba(0,255,255,0.2);
+    border:1px solid #00f5ff;
+}
+
+/* ================= CHAT ================= */
+#chat{
+    height:180px;
+    border:1px solid #1f2937;
+    border-radius:10px;
+    padding:12px;
+    overflow-y:auto;
+    background:#0b1220;   /* Dark Chat Box */
+    color:#f1f5f9;
+}
+
+/* ================= INPUT ================= */
+.input-area{
+    display:flex;
+    gap:8px;
+    margin-top:10px;
+}
+
+.input-area input{
+    flex:1;
+    padding:10px;
+    border:1px solid #1f2937;
+    border-radius:6px;
+    background:#000;
+    color:#fff;
+}
+
+.send-btn{
+    background:#00f5ff;
+    border:none;
+    padding:10px 18px;
+    border-radius:6px;
+    font-weight:bold;
+    cursor:pointer;
+    color:#000;
+}
+
+.mic-btn{
+    background:#22c55e;
+    border:none;
+    padding:10px 12px;
+    border-radius:6px;
+    color:#fff;
+}
+
+.voice-select{
+    background:#000;
+    color:#fff;
+    border:1px solid #1f2937;
+    padding:8px;
+    border-radius:6px;
+}
+
+/* ================= DIVIDER ================= */
+.section-divider{
+    margin:30px 0;
+    border:1px solid #00f5ff;
+}
+
+/* ================= VULNERABILITY SECTION ================= */
+.vuln-heading{
+    font-size:22px;
+    text-align:center;
+    color:#00ffcc;
+    text-shadow:0 0 10px #00ffcc;
+    margin-bottom:5px;
+}
+
+.vuln-subtext{
+    text-align:center;
+    font-size:13px;
+    color:#94a3b8;
+    margin-bottom:20px;
+}
+
+.vuln-input-box{
+    display:flex;
+    gap:12px;
+    justify-content:center;
+}
+
+.vuln-input-box input{
+    width:75%;
+    padding:16px;
+    border-radius:10px;
+    border:1px solid #00f5ff;
+    background:#000;   /* 🔥 Black URL Box */
+    color:#00ffcc;
+    font-size:15px;
+}
+
+.vuln-btn{
+    padding:16px 25px;
+    border:none;
+    border-radius:10px;
+    font-weight:bold;
+    cursor:pointer;
+    background:linear-gradient(45deg,#00f5ff,#00ffcc);
+    color:#000;
+    font-size:15px;
+    transition:.3s;
+}
+
+.vuln-btn:hover{
+    box-shadow:0 0 20px #00ffcc;
+    transform:scale(1.05);
+}
+
+/* ================= SCAN RESULT ================= */
+#scanResult{
+    margin-top:20px;
+    padding:18px;
+    background:#070707d4;   /* ✅ ONLY RESULT WHITE */
+    border-radius:10px;
+    border:1px solid #00f5ff;
+    min-height:60px;
+    color:#111;          /* Black text */
+    font-weight:500;
+}
+
+/* ================= FOOTER ================= */
+/* SLIDER */
+.dev-bar{
+    position:fixed;
+    bottom:0;
+    width:100%;
+    background:rgba(2,6,23,0.85);
+    border-top:1px solid #1e293b;
+    overflow:hidden;
+}
+.dev-text{
+    display:inline-block;
+    white-space:nowrap;
+    padding:12px 0;
+    font-size:15px;
+    color:#38bdf8;
+    font-weight:bold;
+    animation:slideText 15s linear infinite;
+}
+@keyframes slideText{
+    0%{ transform:translateX(100%); }
+    100%{ transform:translateX(-100%); }
+}
+/* ================= HELP POPUP ================= */
+#helpBox{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.6);
+}
+
+.help-content{
+    background:#111827;
+    width:420px;
+    margin:120px auto;
+    padding:25px;
+    border-radius:16px;
+    text-align:center;
+    color:#fff;
+}
